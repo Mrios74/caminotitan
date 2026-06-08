@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+<title>APU · Movimientos Extraordinarios</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}body{margin:0;background:#eef4ff;font-family:'Segoe UI',Arial,sans-serif;color:#1f2937}.apu-wrap{max-width:1180px;margin:18px auto;padding:14px}.apu-card{background:radial-gradient(circle at 50% 0%,rgba(251,191,36,.32),transparent 32%),linear-gradient(145deg,#fff,#eef4ff);border:1px solid #dbe7ff;border-radius:32px;padding:26px;box-shadow:0 20px 44px rgba(30,58,138,.16);text-align:center;overflow:hidden}.apu-mentor{animation:apuIn .8s ease both}.apu-avatar{width:112px;height:112px;margin:0 auto 12px;border-radius:34px;display:flex;align-items:center;justify-content:center;font-size:58px;background:linear-gradient(135deg,#fbbf24,#fde68a);color:#1e3a8a;box-shadow:0 14px 30px rgba(0,0,0,.24)}@keyframes apuIn{from{opacity:0;transform:translateY(28px) scale(.96)}to{opacity:1;transform:none}}.apu-kicker{letter-spacing:.14em;font-size:12px;font-weight:1000;color:#2563eb;text-transform:uppercase}.apu-card h1{margin:4px 0;font-size:clamp(42px,8vw,84px);line-height:.9;color:#1e3a8a}.apu-sub{display:inline-block;padding:10px 16px;border-radius:999px;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-weight:1000}.apu-story{max-width:850px;margin:18px auto 0;font-size:18px;line-height:1.55;font-weight:720}.apu-story strong{color:#1e3a8a}.apu-secrets{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:20px auto;max-width:900px}.apu-secret{background:#fff;border:1px solid #dbe7ff;border-radius:22px;padding:16px;box-shadow:0 10px 20px rgba(30,58,138,.09);text-align:left}.apu-secret b{display:block;color:#1e3a8a;font-size:18px}.apu-secret span{display:block;color:#64748b;font-weight:700;margin-top:4px}.apu-quote{max-width:790px;margin:18px auto 0;background:#fff8dc;border:1px solid #fbbf24;border-radius:22px;padding:16px;color:#594000;font-weight:900;line-height:1.5}.apu-start{text-align:center;margin:20px 0}.apu-btn{border:0;border-radius:16px;padding:12px 18px;font-weight:1000;cursor:pointer;background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;box-shadow:0 8px 18px rgba(37,99,235,.18)}.apu-btn.gold{background:linear-gradient(135deg,#fbbf24,#fde68a);color:#2e2300}.apu-btn.light{background:#eff6ff;color:#1e3a8a;border:1px solid #dbe7ff;box-shadow:none}.apu-game{display:none;margin-top:18px}.apu-hero{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:white;border-radius:24px;padding:18px;box-shadow:0 10px 24px rgba(37,99,235,.22)}.apu-hero h2{margin:0;font-size:clamp(26px,5vw,42px)}.apu-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.apu-tab{border:0;border-radius:999px;padding:10px 14px;font-weight:1000;cursor:pointer;background:#eff6ff;color:#1e3a8a}.apu-tab.active{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff}.apu-layout{display:grid;grid-template-columns:minmax(430px,660px) 1fr;gap:18px;align-items:start}@media(max-width:920px){.apu-layout{grid-template-columns:1fr}.apu-board-shell{max-width:96vw}}.apu-board-panel,.apu-side{background:#fff;border:1px solid #dbe7ff;border-radius:22px;padding:16px;box-shadow:0 6px 16px rgba(0,0,0,.06)}.apu-board-shell{width:min(640px,100%);margin:auto;display:grid;grid-template-columns:28px 1fr;grid-template-rows:1fr 28px;gap:5px}.ranks{grid-column:1;grid-row:1;display:grid;grid-template-rows:repeat(8,1fr)}.files{grid-column:2;grid-row:2;display:grid;grid-template-columns:repeat(8,1fr)}.rank,.file{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:1000;color:#475569}.board{grid-column:2;grid-row:1;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);aspect-ratio:1/1;border:4px solid #1e3a8a;border-radius:16px;overflow:hidden}.sq{position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none}.lightSq{background:#f0d9b5}.darkSq{background:#b58863}.sq.sel{outline:5px solid #fbbf24;outline-offset:-5px;z-index:3}.sq.valid::after{content:"";position:absolute;width:24%;height:24%;border-radius:50%;background:rgba(22,163,74,.8);z-index:2}.sq.last{box-shadow:inset 0 0 0 5px rgba(59,130,246,.55)}.piece{width:86%;height:86%;filter:drop-shadow(0 4px 3px rgba(0,0,0,.32));z-index:4;pointer-events:none}.apu-side h3{margin:0 0 8px;color:#1e3a8a;font-size:28px}.step{background:#f8fbff;border-left:5px solid #2563eb;border-radius:16px;padding:14px;margin:10px 0;font-weight:750;line-height:1.45}.goal{font-weight:1000;color:#1e3a8a;margin-top:8px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.msg{min-height:44px;background:#f8fbff;border:1px solid #dbe7ff;border-radius:14px;padding:12px;font-weight:900}.msg.ok{background:#ecfdf5;border-color:#86efac;color:#166534}.msg.bad{background:#fef2f2;border-color:#fecaca;color:#991b1b}.scenario{font-size:14px;color:#475569;font-weight:850}.promo{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.promo button{border:1px solid #dbe7ff;background:#eff6ff;color:#1e3a8a;border-radius:14px;padding:10px 13px;font-weight:1000;cursor:pointer}.final{margin-top:16px;background:linear-gradient(145deg,#fff7dc,#eef4ff);border:2px solid #fbbf24;border-radius:24px;padding:18px;text-align:center;box-shadow:0 14px 28px rgba(251,191,36,.18)}.badge{display:inline-block;background:#fff;border:1px solid #fbbf24;color:#1e3a8a;border-radius:16px;padding:10px 16px;font-weight:1000;margin:8px auto}.confetti-layer{position:fixed;inset:0;pointer-events:none;z-index:999999;overflow:hidden}.confetti{position:absolute;width:10px;height:16px;background:#f7d44a;animation:fall linear forwards}@keyframes fall{to{transform:translateY(100vh) rotate(720deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="apu-wrap">
+  <section class="apu-card apu-mentor">
+    <div class="apu-avatar">🏔️</div>
+    <div class="apu-kicker">Curso Interactivo de Iniciación · MRAcademy</div>
+    <h1>APU</h1>
+    <div class="apu-sub">Guardián de los Movimientos Extraordinarios</div>
+    <div class="apu-story">
+      <p>Hola, aprendiz. <strong>Soy Apu.</strong></p>
+      <p>En quechua, mi nombre significa <strong>grande</strong>. He venido porque antes de continuar por el Camino del Titán existe un conocimiento que todo jugador debe dominar.</p>
+      <p>Muchos aprenden cómo se mueve cada pieza. Muchos conocen las reglas básicas. Pero sólo quienes comprenden los <strong>Movimientos Extraordinarios</strong> descubren secretos importantes del ajedrez.</p>
+    </div>
+    <div class="apu-secrets">
+      <div class="apu-secret"><b>🏰 El Enroque</b><span>El rey encuentra refugio y la torre despierta.</span></div>
+      <div class="apu-secret"><b>♟️ La Captura al Paso</b><span>Una oportunidad aparece sólo una vez.</span></div>
+      <div class="apu-secret"><b>👑 La Coronación</b><span>Hasta un peón puede alcanzar la grandeza.</span></div>
+    </div>
+    <div class="apu-quote">📜 <b>Consejo de Apu</b><br>Un peón puede convertirse en reina. Un rey puede encontrar refugio. Una oportunidad puede aparecer una sola vez. Los Titanes reconocen esos momentos y los aprovechan.</div>
+  </section>
+
+  <div class="apu-start"><button class="apu-btn gold" id="startApu">⚡ COMENZAR LA MISIÓN DE APU ⚡</button></div>
+
+  <main class="apu-game" id="apuGame">
+    <div class="apu-hero"><h2>⚡ Movimientos Extraordinarios</h2><p>Practica en varias posiciones hasta dominar cada secreto.</p></div>
+    <div class="apu-tabs">
+      <button class="apu-tab active" data-lesson="castle">🏰 Enroque</button>
+      <button class="apu-tab" data-lesson="ep">♟️ Al paso</button>
+      <button class="apu-tab" data-lesson="promo">👑 Coronación</button>
+    </div>
+    <div class="apu-layout">
+      <section class="apu-board-panel"><div class="apu-board-shell"><div class="ranks" id="ranks"></div><div class="board" id="board"></div><div class="files" id="files"></div></div></section>
+      <aside class="apu-side">
+        <h3 id="title"></h3>
+        <div class="scenario" id="scenario"></div>
+        <div class="step" id="step"></div>
+        <div class="actions">
+          <button class="apu-btn light" id="resetLesson">🔄 Reiniciar posición</button>
+          <button class="apu-btn light" id="prevPos">⬅️ Posición anterior</button>
+          <button class="apu-btn" id="nextPos">Siguiente posición ➡️</button>
+          <button class="apu-btn gold" id="resetAll">🏔️ Reiniciar misión</button>
+        </div>
+        <div class="promo" id="promoBox"></div>
+        <div class="msg" id="msg"></div>
+        <div id="finalBox"></div>
+      </aside>
+    </div>
+  </main>
+</div>
+<script>
+(function(){
+const $=id=>document.getElementById(id), files=['a','b','c','d','e','f','g','h'], ranks=[8,7,6,5,4,3,2,1];
+const U={wK:'♔',wQ:'♕',wR:'♖',wB:'♗',wN:'♘',wP:'♙',bK:'♚',bQ:'♛',bR:'♜',bB:'♝',bN:'♞',bP:'♟'};
+const SAVE='mra_apu_extraordinarios_v2', DONE='mra_apu_movimientos_extraordinarios';
+let lesson='castle', pos=0, board={}, selected=null, msg='Selecciona la pieza indicada por Apu.', msgType='', last=null, pendingPromo=false, completed={castle:[],ep:[],promo:[]};
+const lessons={
+ castle:{title:'🏰 El Enroque', intro:'El rey es valioso. Un Titán no lo abandona: construye una fortaleza.', positions:[
+  {name:'Práctica 1 · Enroque corto blanco', board:{e1:'wK',h1:'wR',a1:'wR',e8:'bK'}, from:'e1', to:'g1', kind:'castle', rookFrom:'h1', rookTo:'f1', text:'Haz enroque corto: rey de e1 a g1.', goal:'e1 → g1'},
+  {name:'Práctica 2 · Enroque largo blanco', board:{e1:'wK',a1:'wR',h1:'wR',e8:'bK'}, from:'e1', to:'c1', kind:'castle', rookFrom:'a1', rookTo:'d1', text:'Ahora protege al rey por el otro lado: enroque largo.', goal:'e1 → c1'},
+  {name:'Práctica 3 · Enroque corto negro', board:{e8:'bK',h8:'bR',a8:'bR',e1:'wK'}, from:'e8', to:'g8', kind:'castle', rookFrom:'h8', rookTo:'f8', text:'También las negras pueden enrocar. Haz enroque corto negro.', goal:'e8 → g8'},
+  {name:'Práctica 4 · Enroque largo negro', board:{e8:'bK',a8:'bR',h8:'bR',e1:'wK'}, from:'e8', to:'c8', kind:'castle', rookFrom:'a8', rookTo:'d8', text:'Última fortaleza: enroque largo negro.', goal:'e8 → c8'}]},
+ ep:{title:'♟️ Captura al Paso', intro:'Algunas oportunidades aparecen una sola vez. Si no actúas en el momento exacto, desaparecen.', positions:[
+  {name:'Práctica 1 · Blanco captura al paso', board:{e5:'wP',d7:'bP',e1:'wK',e8:'bK'}, sequence:[['d7','d5'],['e5','d6']], epRemove:'d5', text:'Primero mueve el peón negro dos pasos. Luego captura al paso con el peón blanco.', goal:'d7 → d5, después e5 → d6'},
+  {name:'Práctica 2 · Blanco captura hacia la derecha', board:{c5:'wP',d7:'bP',e1:'wK',e8:'bK'}, sequence:[['d7','d5'],['c5','d6']], epRemove:'d5', text:'La captura al paso también puede hacerse hacia la derecha.', goal:'d7 → d5, después c5 → d6'},
+  {name:'Práctica 3 · Negro captura al paso', board:{d4:'bP',e2:'wP',e1:'wK',e8:'bK'}, sequence:[['e2','e4'],['d4','e3']], epRemove:'e4', text:'Ahora las negras aprovechan la oportunidad.', goal:'e2 → e4, después d4 → e3'}]},
+ promo:{title:'👑 Coronación', intro:'Todo gran viaje comienza con un primer paso. Incluso un peón puede alcanzar la grandeza.', positions:[
+  {name:'Práctica 1 · Coronación blanca', board:{e7:'wP',e1:'wK',h8:'bK'}, from:'e7', to:'e8', promote:'wQ', text:'Lleva el peón blanco a la última fila y elige Dama.', goal:'e7 → e8 y ♕ Dama'},
+  {name:'Práctica 2 · Coronación blanca por columna a', board:{a7:'wP',e1:'wK',h8:'bK'}, from:'a7', to:'a8', promote:'wQ', text:'Un peón en la columna a también puede alcanzar la grandeza.', goal:'a7 → a8 y ♕ Dama'},
+  {name:'Práctica 3 · Coronación negra', board:{h2:'bP',e1:'wK',e8:'bK'}, from:'h2', to:'h1', promote:'bQ', text:'Las negras también coronan. Lleva el peón a h1 y elige Dama.', goal:'h2 → h1 y ♛ Dama'}]}
+};
+function cp(o){return JSON.parse(JSON.stringify(o||{}))}function sqColor(s){return ((files.indexOf(s[0])+parseInt(s[1])-1)%2===0)?'darkSq':'lightSq'}
+function svg(p){if(!p)return'';let white=p[0]==='w',fill=white?'#f8fafc':'#111827',stroke=white?'#1e3a8a':'#020617';return `<svg class="piece" viewBox="0 0 100 100"><text x="50" y="72" text-anchor="middle" font-size="74" font-family="Georgia,serif" font-weight="900" fill="${fill}" stroke="${stroke}" stroke-width="2.8" paint-order="stroke fill">${U[p]}</text></svg>`}
+function squares(){let a=[];for(let r=8;r>=1;r--)for(let f of files)a.push(f+r);return a}
+function cur(){return lessons[lesson].positions[pos]}function sequenceIndex(){return cur().sequence?cur().sequence.findIndex(m=>!(completed[lesson][pos]||[]).some(x=>x[0]===m[0]&&x[1]===m[1])):-1}
+function expected(){let c=cur();if(c.sequence){let done=completed[lesson][pos]||[];return c.sequence[done.length]||null}return [c.from,c.to]}
+function validTargets(){if(!selected)return[];let e=expected();return e&&selected===e[0]?[e[1]]:[]}
+function loadPosition(){board=cp(cur().board);selected=null;last=null;pendingPromo=false;completed[lesson][pos]=[];msg='Selecciona la pieza indicada por Apu.';msgType='';save();render()}
+function markDone(from,to){completed[lesson][pos]=completed[lesson][pos]||[];completed[lesson][pos].push([from,to])}
+function isPositionDone(){let c=cur();if(c.promote)return board[c.to]===c.promote;if(c.sequence)return (completed[lesson][pos]||[]).length>=c.sequence.length;return last&&last.from===c.from&&last.to===c.to}
+function allDone(){return Object.keys(lessons).every(k=>lessons[k].positions.every((_,i)=>localStorage.getItem(`${DONE}_${k}_${i}`)==='1'))}
+function celebrate(big=false){let layer=document.createElement('div');layer.className='confetti-layer';document.body.appendChild(layer);for(let i=0;i<(big?160:55);i++){let c=document.createElement('div');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.backgroundColor=`hsl(${35+Math.random()*85},85%,55%)`;c.style.animationDuration=.8+Math.random()*1.2+'s';layer.appendChild(c)}setTimeout(()=>layer.remove(),2200)}
+function completePosition(){localStorage.setItem(`${DONE}_${lesson}_${pos}`,'1');msg='🏆 ¡Correcto! Dominaste esta posición.';msgType='ok';celebrate(false);save();if(allDone()){localStorage.setItem(DONE,'completado');celebrate(true)}}
+function clickSquare(sq){if(pendingPromo){msg='Elige primero la pieza de coronación.';msgType='bad';render();return}if(selected){let vt=validTargets();if(!vt.includes(sq)){msg='❌ Movimiento incorrecto. Sigue el objetivo de Apu.';msgType='bad';selected=null;render();return}move(selected,sq);return}if(board[sq]){selected=sq;msg='Seleccionada. Ahora elige la casilla marcada en verde.';msgType='';render()}else{msg='❌ Casilla vacía. Selecciona la pieza indicada.';msgType='bad';render()}}
+function move(from,to){let c=cur(),piece=board[from];board[to]=piece;delete board[from];last={from,to};selected=null;if(c.kind==='castle'){board[c.rookTo]=board[c.rookFrom];delete board[c.rookFrom]}if(c.sequence){let done=(completed[lesson][pos]||[]).length;markDone(from,to);if(done===1&&c.epRemove)delete board[c.epRemove];if(isPositionDone())completePosition();else{msg='✅ Primer movimiento listo. Ahora aprovecha la oportunidad.';msgType='ok'}}else if(c.promote){pendingPromo=true;msg='✅ Peón en la última fila. Elige la Dama para coronar.';msgType='ok'}else{completePosition()}save();render()}
+function promote(p){let c=cur();if(!pendingPromo)return;if(p!==c.promote){msg='❌ En esta misión Apu pide coronar en Dama.';msgType='bad';render();return}board[c.to]=p;pendingPromo=false;completePosition();render()}
+function next(){let arr=lessons[lesson].positions;if(pos<arr.length-1){pos++;loadPosition()}else{let keys=Object.keys(lessons),i=keys.indexOf(lesson);if(i<keys.length-1){lesson=keys[i+1];pos=0;setTabs();loadPosition()}else{msg='Llegaste al final. Revisa si completaste todas las posiciones.';msgType='ok';render()}}}
+function prev(){if(pos>0){pos--;loadPosition()}else{let keys=Object.keys(lessons),i=keys.indexOf(lesson);if(i>0){lesson=keys[i-1];pos=lessons[lesson].positions.length-1;setTabs();loadPosition()}}}
+function setTabs(){document.querySelectorAll('.apu-tab').forEach(b=>b.classList.toggle('active',b.dataset.lesson===lesson))}
+function render(){let c=cur();$('ranks').innerHTML=ranks.map(r=>`<div class="rank">${r}</div>`).join('');$('files').innerHTML=files.map(f=>`<div class="file">${f}</div>`).join('');let vt=validTargets();$('board').innerHTML=squares().map(s=>`<div class="sq ${sqColor(s)} ${selected===s?'sel':''} ${vt.includes(s)?'valid':''} ${last&&(last.from===s||last.to===s)?'last':''}" data-sq="${s}">${svg(board[s])}</div>`).join('');document.querySelectorAll('[data-sq]').forEach(el=>el.onclick=()=>clickSquare(el.dataset.sq));$('title').textContent=lessons[lesson].title;$('scenario').textContent=c.name;$('step').innerHTML=`<p>${lessons[lesson].intro}</p><p>${c.text}</p><div class="goal">🎯 ${c.goal}</div>`;$('msg').className='msg '+msgType;$('msg').textContent=msg;$('promoBox').innerHTML=pendingPromo?['wQ','wR','wB','wN','bQ','bR','bB','bN'].filter(x=>x[0]===cur().promote[0]).map(p=>`<button data-promo="${p}">${U[p]} ${p[1]==='Q'?'Dama':p[1]==='R'?'Torre':p[1]==='B'?'Alfil':'Caballo'}</button>`).join(''):'';document.querySelectorAll('[data-promo]').forEach(b=>b.onclick=()=>promote(b.dataset.promo));$('finalBox').innerHTML=allDone()?`<div class="final"><h2>🏆 MISIÓN COMPLETADA</h2><p>Has dominado el Enroque, la Captura al Paso y la Coronación en varias posiciones.</p><div class="badge">📜 Insignia desbloqueada: Guardián de los Secretos</div><p>🔓 Nuevo camino disponible: <b>♞ Camino del Caballero del Rey</b></p><button class="apu-btn gold" onclick="location.href='https://mauricioriosparra.blogspot.com/p/modulo2.html'">⚔️ CONTINUAR</button></div>`:''}
+function save(){try{localStorage.setItem(SAVE,JSON.stringify({lesson,pos}))}catch(e){}}
+function load(){try{let s=JSON.parse(localStorage.getItem(SAVE)||'{}');if(s.lesson&&lessons[s.lesson]){lesson=s.lesson;pos=s.pos||0}}catch(e){}board=cp(cur().board)}
+$('startApu').onclick=function(){let g=$('apuGame');if(g.style.display==='block'){g.style.display='none';this.textContent='⚡ COMENZAR LA MISIÓN DE APU ⚡'}else{g.style.display='block';this.textContent='⚡ Ocultar misión de Apu';render();g.scrollIntoView({behavior:'smooth',block:'start'})}};
+document.querySelectorAll('.apu-tab').forEach(b=>b.onclick=()=>{lesson=b.dataset.lesson;pos=0;setTabs();loadPosition()});$('resetLesson').onclick=loadPosition;$('prevPos').onclick=prev;$('nextPos').onclick=next;$('resetAll').onclick=()=>{if(confirm('¿Reiniciar toda la misión de Apu?')){Object.keys(localStorage).forEach(k=>{if(k.startsWith(DONE)||k===SAVE)localStorage.removeItem(k)});lesson='castle';pos=0;setTabs();loadPosition()}};
+load();setTabs();render();
+})();
+</script>
+</body>
+</html>
